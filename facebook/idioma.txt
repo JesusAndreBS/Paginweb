@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector de idioma</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #text {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="text">Hola, bienvenido a nuestro sitio web.</div>
+
+  <button onclick="changeLanguage('es')">Español 🇪🇸</button>
+  <button onclick="changeLanguage('en')">English 🇺🇸</button>
+  <button onclick="changeLanguage('zh')">中文 🇨🇳</button>
+
+  <script>
+    const translations = {
+      es: "Hola, bienvenido a nuestro sitio web.",
+      en: "Hello, welcome to our website.",
+      zh: "你好，欢迎来到我们的网站。"
+    };
+
+    function changeLanguage(lang) {
+      document.getElementById("text").textContent = translations[lang];
+    }
+  </script>
+
+</body>
+</html>
